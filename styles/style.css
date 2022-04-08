@@ -1,0 +1,64 @@
+/* BASELINE STYLES */
+
+html{
+
+}
+
+body{
+
+}
+
+h1{
+
+}
+
+h2{
+
+}
+
+p{
+    color:rgb(0,0,0);
+}
+
+a{
+    color:rgb(0,0,0);
+}
+
+/* SPECIFICS */
+
+/* HEADER */
+
+.header{
+
+    position:fixed;
+    background-color: rgb(15,24,43);
+    width: 100%;
+    padding: 20px 0;
+    top: 0;
+
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+    font-size: large;
+
+}
+
+.header li{
+
+    display:inline-block;
+    padding: 5px 30px 5px;
+
+}
+
+.header a{
+
+    font-size:18px;
+    color:rgba(168,201,255,0.85);
+    text-decoration: none;
+
+}
+
+a:hover{
+
+    color:rgba(68,122,180,0.85);
+
+}
