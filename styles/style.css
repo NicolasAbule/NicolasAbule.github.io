@@ -62,3 +62,33 @@ a:hover{
     color:rgba(68,122,180,0.85);
 
 }
+
+/* FOOTER */
+
+.footer{
+
+    position:relative;
+    background-color: rgb(15,24,43);
+    width: 100%;
+    padding: 20px 0;
+
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+
+}
+
+p.footer{
+
+    color:rgba(250,235,215,0.85);
+    text-decoration:none;
+    font-size:18px;
+
+}
+
+.name {
+
+    color: rgba(168,201,255,1);
+    text-decoration:none;
+    font-size:18px;
+
+}
