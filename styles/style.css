@@ -67,10 +67,11 @@ a:hover{
 
 .footer{
 
-    position:relative;
+    position:absolute;
     background-color: rgb(15,24,43);
     width: 100%;
     padding: 20px 0;
+    
 
     font-family: 'Secular One', sans-serif;
     font-weight: 400;
