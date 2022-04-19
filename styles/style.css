@@ -1,13 +1,5 @@
 /* BASELINE STYLES */
 
-html{
-
-}
-
-body{
-
-}
-
 h1{
 
 }
@@ -24,7 +16,20 @@ a{
     color:rgb(0,0,0);
 }
 
-/* SPECIFICS */
+/*        SPECIFICS         */
+
+
+/* CONTACTME */
+
+image.logos{
+
+    
+
+}
+
+
+
+
 
 /* HEADER */
 
@@ -71,7 +76,6 @@ a:hover{
     background-color: rgb(15,24,43);
     width: 100%;
     padding: 20px 0;
-    
 
     font-family: 'Secular One', sans-serif;
     font-weight: 400;
@@ -81,9 +85,10 @@ a:hover{
 
 p.footer{
 
-    color:rgba(250,235,215,0.85);
+    color:rgba(253, 243, 229, 0.925);
     text-decoration:none;
     font-size:18px;
+    padding-left: 30px;
 
 }
 
