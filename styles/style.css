@@ -21,9 +21,12 @@ a{
 
 /* CONTACTME */
 
-image.logos{
+.logo img{
 
-    
+    height: 100%;
+    width: 100%;
+    min-height: 300px;
+    min-width: 300px;
 
 }
 
