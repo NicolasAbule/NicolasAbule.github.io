@@ -1,7 +1,11 @@
 /* BASELINE STYLES */
 
 html{
+    font-size: 75%;
+}
 
+@media only screen and (max-device-width: 480px) {
+	html { font-size: 100%;}
 }
 
 section{
@@ -13,7 +17,9 @@ section{
 }
 
 h1{
-
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18em;
+    font-weight: 400;
 }
 
 h2{
@@ -33,7 +39,7 @@ a{
 .centerimage{
 
     display:block;
-    padding: 5% 10% 1%;
+    padding: 7% 10% 2%;
     height: 50%;
     max-height: 400px;
     width: 80%;
@@ -53,10 +59,13 @@ a{
 
 /* CONTACTME */
 
-.logo img{
+.logo{
 
-    height: 300px;
-    width: 300px;
+    height: 15%;
+    max-height: 300px;
+    width: 15%;
+    max-width: 300px;
+    padding: 0 4.8% 2%;
     object-fit: scale-down;
 
 }
