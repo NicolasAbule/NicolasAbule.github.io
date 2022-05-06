@@ -16,6 +16,8 @@ section{
     height: 150px;
     width: 100%;
     opacity: 0;
+    z-index: 1;
+    display: inline-block;
 
 }
 
@@ -86,6 +88,7 @@ a{
     max-height: 100%;
     max-width: 100%;
 
+    
     object-fit: contain;
     object-position: center;
     margin-left: auto;
@@ -106,6 +109,7 @@ a{
     object-fit: scale-down;
 
 }
+
 
 /* ABOUTME */
 
@@ -137,6 +141,7 @@ p.about{
     font-family: 'Secular One', sans-serif;
     font-weight: 400;
     font-size: large;
+    z-index: 999;
 
 }
 
@@ -167,14 +172,13 @@ a:hover{
 
     position:relative;
     background-color: rgb(15,24,43);
-    width: 100%;
-    padding: 20px 0 0;
-    height: 40px;
+    width:100%;
+    padding: 20px 0 20px;
 
     font-family: 'Secular One', sans-serif;
     font-weight: 400;
-    bottom:0;
-    left:0px;
+    font-size: large;
+    display: inline-block;
 
 }
 
