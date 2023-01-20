@@ -111,6 +111,23 @@ a{
 }
 
 
+
+/* PORTFOLIO */
+
+.project{
+
+    height: 150px;
+    max-height: 30%;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 1;
+    display: inline-block;
+
+}
+
+
+
 /* ABOUTME */
 
 p.about{
