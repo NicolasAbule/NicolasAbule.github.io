@@ -55,18 +55,27 @@
                 return response.text();
             })
             .then(csvData => {
-                const rows = csvData.split('\n');
-                const table = document.getElementById('csvTable');
+                // Parse CSV data using PapaParse
+                Papa.parse(csvData, {
+                    header: false, // Assuming the first row is not the header
+                    skipEmptyLines: true,
+                    complete: function(results) {
+                        const table = document.getElementById('csvTable');
 
-                for (let i = 1; i < rows.length; i++) {
-                    const cols = rows[i].split(',');
-                    const newRow = table.insertRow();
+                        for (let i = 0; i < results.data.length; i++) {
+                            const cols = results.data[i];
+                            const newRow = table.insertRow();
 
-                    for (let j = 0; j < cols.length; j++) {
-                        const newCell = newRow.insertCell();
-                        newCell.textContent = cols[j];
+                            for (let j = 0; j < cols.length; j++) {
+                                const newCell = newRow.insertCell();
+                                newCell.textContent = cols[j];
+                            }
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Error parsing CSV:', error);
                     }
-                }
+                });
             })
             .catch(error => console.error('Error fetching CSV:', error));
     </script>
