@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced Vue.js Web Page</title>
-  
-  <!-- Vue.js CDN -->
+  <title>Vue.js Web Page</title>
   <script src="https://unpkg.com/vue@3"></script>
-  
-  <!-- Internal CSS for styling -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -48,6 +44,7 @@
     }
   </style>
 </head>
+
 <body>
   <div id="app">
     <h1>{{ title }}</h1>
@@ -60,40 +57,28 @@
       {{ showDescription ? 'Hide' : 'Show' }} Description
     </button>
     
-    <h2>My Favorite Frameworks:</h2>
+    <h2>Framework used:</h2>
     <ul>
       <li v-for="framework in frameworks" :key="framework">
         {{ framework }}
       </li>
     </ul>
 
-    <h2>Add a New Framework:</h2>
-    <input v-model="newFramework" placeholder="Enter framework name">
-    <button @click="addFramework" :disabled="!newFramework">Add Framework</button>
-
-    <p v-if="frameworks.length === 0">No frameworks added yet.</p>
   </div>
 
   <script>
     const app = Vue.createApp({
       data() {
         return {
-          title: 'Enhanced Vue.js Web Page',
-          description: 'This webpage demonstrates the use of Vue.js attributes, such as v-model, v-if, v-for, and event handling.',
+          title: 'Vue.js Web Page',
+          description: 'This website was created using vue.js through a CDN and hosted using github pages. I also have installed vue.js which was a simple process. Most of the difficulty was in trying to create the app within the html file and have it show the correct information that corresponds with each section but that was a simple fix looking at the stack overflow pages.',
           showDescription: true,
-          frameworks: ['Vue.js', 'React', 'Angular'],
-          newFramework: ''
+          frameworks: ['Vue.js'],
         };
       },
       methods: {
         toggleDescription() {
           this.showDescription = !this.showDescription;
-        },
-        addFramework() {
-          if (this.newFramework.trim()) {
-            this.frameworks.push(this.newFramework.trim());
-            this.newFramework = '';
-          }
         }
       }
     });
