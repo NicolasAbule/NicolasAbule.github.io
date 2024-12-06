@@ -3,18 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Vue.js Page</title>
+  <title>Enhanced Vue.js Web Page</title>
+  
+  <!-- Vue.js CDN -->
   <script src="https://unpkg.com/vue@3"></script>
+  
+  <!-- Internal CSS for styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    #app {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #007bff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    p:last-child {
+      font-style: italic;
+      color: #555;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 5px 0;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
-    <h1>Simple Vue.js Web Page</h1>
-    <p>This webpage was created using Vue.js via a CDN.</p>
-    <p>Difficulties encountered: None, since no installation was needed!</p>
+    <h1>{{ title }}</h1>
+    
+    <p v-if="showDescription">
+      {{ description }}
+    </p>
+
+    <button @click="toggleDescription">
+      {{ showDescription ? 'Hide' : 'Show' }} Description
+    </button>
+    
+    <h2>My Favorite Frameworks:</h2>
+    <ul>
+      <li v-for="framework in frameworks" :key="framework">
+        {{ framework }}
+      </li>
+    </ul>
+
+    <h2>Add a New Framework:</h2>
+    <input v-model="newFramework" placeholder="Enter framework name">
+    <button @click="addFramework" :disabled="!newFramework">Add Framework</button>
+
+    <p v-if="frameworks.length === 0">No frameworks added yet.</p>
   </div>
 
   <script>
-    const app = Vue.createApp({});
+    const app = Vue.createApp({
+      data() {
+        return {
+          title: 'Enhanced Vue.js Web Page',
+          description: 'This webpage demonstrates the use of Vue.js attributes, such as v-model, v-if, v-for, and event handling.',
+          showDescription: true,
+          frameworks: ['Vue.js', 'React', 'Angular'],
+          newFramework: ''
+        };
+      },
+      methods: {
+        toggleDescription() {
+          this.showDescription = !this.showDescription;
+        },
+        addFramework() {
+          if (this.newFramework.trim()) {
+            this.frameworks.push(this.newFramework.trim());
+            this.newFramework = '';
+          }
+        }
+      }
+    });
+
     app.mount('#app');
   </script>
 </body>
