@@ -7,15 +7,63 @@
     <link rel="icon" href="../icon.PNG">
     <title>Nicolas Abule</title>
 
+    <style>
+  body {
+    margin: 0;
+    background: #111;
+  }
+
+  .masonry {
+    column-count: 4;        /* number of columns */
+    column-gap: 12px;       /* spacing between columns */
+    padding: 12px;
+  }
+
+  .masonry img {
+    width: 100%;
+    margin-bottom: 12px;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1000px) {
+    .masonry { column-count: 3; }
+  }
+
+  @media (max-width: 700px) {
+    .masonry { column-count: 2; }
+  }
+
+  @media (max-width: 500px) {
+    .masonry { column-count: 1; }
+  }
+</style>
+
 </head>
 
 <body style="background-color: lightblue;">
-<h1>Concert</h1>
-<img src="../images/torr1-mono.jpg" style="width: max(400px, 49vw)">
-<img src="../images/torrpatchy3-colour.jpg" style="width: max(400px, 49vw)">
-<h1>Outdoors</h1>
-<img src="../images/0W9A6935.jpg" style="width: max(400px, 49vw)">
-<img src="../images/0W9A7005.jpg" style="width: max(400px, 49vw)">
-<h1>Other</h1>
+
+<div class="masonry">
+    <img src="../images/torrpatchy3-colour.jpg" style="width: max(200px, 24vw)">
+    <img src="../images/0W9A6935.jpg" style="width: max(200px, 24vw)">
+    <img src="../images/0W9A8109.JPG" style="width: max(200px, 24vw)">
+    <img src="../images/IMG_9189-2.JPG" style="width: max(200px, 24vw)">
+    <img src="../images/torr2-colour.png" style="width: max(200px, 24vw)">
+    <img src="../images/IMG_9037-2.JPG" style="width: max(200px, 24vw)">
+    <img src="../images/IMG_9047.JPG" style="width: max(200px, 24vw)">
+    <img src="../images/0W9A8466.JPG" style="width: max(200px, 24vw)">
+    <img src="../images/0W9A7005.jpg" style="width: max(200px, 24vw)">
+    <img src="../images/0W9A7097.JPG" style="width: max(200px, 24vw)">
+</div>
+
+
+<h2>Works</h2>
+<ul>
+    <li><a href="https://nicolasabule.github.io">Home</a></li>
+    <li><a href="https://nicolasabule.github.io/papers">Research Papers</a></li>
+    <li><a href="https://nicolasabule.github.io/photography">Photography</a></li>
+</ul>
 
 </html>
